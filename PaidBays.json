@@ -1,0 +1,22 @@
+[
+    {
+        "costForRequestedOrMaximumDuration": 240,
+        "latitude": "51.499815",
+        "longitude": "-0.133646"
+    },
+    {
+        "costForRequestedOrMaximumDuration": 440,
+        "latitude": "51.499753",
+        "longitude": "-0.132643"
+    },
+    {
+        "costForRequestedOrMaximumDuration": 340,
+        "latitude": "51.49967",
+        "longitude": "-0.132642"
+    },
+    {
+        "costForRequestedOrMaximumDuration": 240,
+        "latitude": "51.499756",
+        "longitude": "-0.132413"
+    }
+]

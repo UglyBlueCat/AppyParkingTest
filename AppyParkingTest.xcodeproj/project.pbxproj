@@ -13,6 +13,9 @@
 		007168861BE63CE00073C0A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007168841BE63CE00073C0A5 /* Main.storyboard */; };
 		007168881BE63CE00073C0A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 007168871BE63CE00073C0A5 /* Assets.xcassets */; };
 		0071688B1BE63CE00073C0A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007168891BE63CE00073C0A5 /* LaunchScreen.storyboard */; };
+		00AAEFE61BE9586100BB1847 /* MapPin.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AAEFE51BE9586100BB1847 /* MapPin.m */; };
+		00AAEFE91BE9599200BB1847 /* paid-bay.png in Resources */ = {isa = PBXBuildFile; fileRef = 00AAEFE71BE9599200BB1847 /* paid-bay.png */; };
+		00AAEFEA1BE9599200BB1847 /* PaidBays.json in Resources */ = {isa = PBXBuildFile; fileRef = 00AAEFE81BE9599200BB1847 /* PaidBays.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,10 @@
 		007168871BE63CE00073C0A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0071688A1BE63CE00073C0A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0071688C1BE63CE00073C0A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00AAEFE41BE9586100BB1847 /* MapPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPin.h; sourceTree = "<group>"; };
+		00AAEFE51BE9586100BB1847 /* MapPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPin.m; sourceTree = "<group>"; };
+		00AAEFE71BE9599200BB1847 /* paid-bay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paid-bay.png"; sourceTree = "<group>"; };
+		00AAEFE81BE9599200BB1847 /* PaidBays.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PaidBays.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,8 @@
 		0071687A1BE63CDF0073C0A5 /* AppyParkingTest */ = {
 			isa = PBXGroup;
 			children = (
+				00AAEFE71BE9599200BB1847 /* paid-bay.png */,
+				00AAEFE81BE9599200BB1847 /* PaidBays.json */,
 				0071687E1BE63CDF0073C0A5 /* AppDelegate.h */,
 				0071687F1BE63CDF0073C0A5 /* AppDelegate.m */,
 				007168811BE63CDF0073C0A5 /* ViewController.h */,
@@ -67,6 +76,8 @@
 				007168891BE63CE00073C0A5 /* LaunchScreen.storyboard */,
 				0071688C1BE63CE00073C0A5 /* Info.plist */,
 				0071687B1BE63CDF0073C0A5 /* Supporting Files */,
+				00AAEFE41BE9586100BB1847 /* MapPin.h */,
+				00AAEFE51BE9586100BB1847 /* MapPin.m */,
 			);
 			path = AppyParkingTest;
 			sourceTree = "<group>";
@@ -137,7 +148,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0071688B1BE63CE00073C0A5 /* LaunchScreen.storyboard in Resources */,
+				00AAEFEA1BE9599200BB1847 /* PaidBays.json in Resources */,
 				007168881BE63CE00073C0A5 /* Assets.xcassets in Resources */,
+				00AAEFE91BE9599200BB1847 /* paid-bay.png in Resources */,
 				007168861BE63CE00073C0A5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00AAEFE61BE9586100BB1847 /* MapPin.m in Sources */,
 				007168831BE63CE00073C0A5 /* ViewController.m in Sources */,
 				007168801BE63CDF0073C0A5 /* AppDelegate.m in Sources */,
 				0071687D1BE63CDF0073C0A5 /* main.m in Sources */,
@@ -300,6 +314,7 @@
 				007168911BE63CE00073C0A5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
