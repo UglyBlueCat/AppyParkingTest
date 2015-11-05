@@ -9,9 +9,10 @@
 #import "ViewController.h"
 #import <MapKit/MapKit.h>
 #import "MapPin.h"
-//#import "PaidBay.h"
+#import "LayerView.h"
+#import "LayerProtocol.h"
 
-@interface ViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
+@interface ViewController () <CLLocationManagerDelegate, MKMapViewDelegate, LayerProtocol>
 
 @property (nonatomic) MKMapView *mapView;
 @property (nonatomic) CLLocationManager  *locationManager;
@@ -30,6 +31,7 @@
     [self configureLocationManager];
     [self populateMap];
     [self.mapView showAnnotations:self.annotations animated:YES];
+    [self addLayers];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -97,6 +99,19 @@
     [self.mapView addAnnotations:self.annotations];
 }
 
+- (void)addLayers {
+    [self createLayerAtPosition:4 withColour:[UIColor darkGrayColor]];
+    [self createLayerAtPosition:3 withColour:[UIColor colorWithRed:1 green:0 blue:1 alpha:1]];
+    [self createLayerAtPosition:2 withColour:[UIColor blueColor]];
+    [self createLayerAtPosition:1 withColour:[UIColor greenColor]];
+}
+
+- (void)createLayerAtPosition:(int)position withColour:(UIColor*)colour {
+    LayerView* layer = [[LayerView alloc] initWithPosition:position colour:colour];
+    layer.delegate = self;
+    [self.view addSubview:layer];
+}
+
 #pragma mark MKAnnotationView methods
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
@@ -136,6 +151,12 @@
         self.OKToLocate = NO;
     }
     [self updateLocationManager];
+}
+
+#pragma mark LayerProtocol methods
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event layer:(id)layer {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
 }
 
 @end

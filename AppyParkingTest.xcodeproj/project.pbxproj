@@ -13,6 +13,7 @@
 		007168861BE63CE00073C0A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007168841BE63CE00073C0A5 /* Main.storyboard */; };
 		007168881BE63CE00073C0A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 007168871BE63CE00073C0A5 /* Assets.xcassets */; };
 		0071688B1BE63CE00073C0A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 007168891BE63CE00073C0A5 /* LaunchScreen.storyboard */; };
+		0098893C1BEBE674004BD49E /* LayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0098893B1BEBE674004BD49E /* LayerView.m */; };
 		00AAEFE61BE9586100BB1847 /* MapPin.m in Sources */ = {isa = PBXBuildFile; fileRef = 00AAEFE51BE9586100BB1847 /* MapPin.m */; };
 		00AAEFE91BE9599200BB1847 /* paid-bay.png in Resources */ = {isa = PBXBuildFile; fileRef = 00AAEFE71BE9599200BB1847 /* paid-bay.png */; };
 		00AAEFEA1BE9599200BB1847 /* PaidBays.json in Resources */ = {isa = PBXBuildFile; fileRef = 00AAEFE81BE9599200BB1847 /* PaidBays.json */; };
@@ -29,6 +30,9 @@
 		007168871BE63CE00073C0A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0071688A1BE63CE00073C0A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0071688C1BE63CE00073C0A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0098893A1BEBE674004BD49E /* LayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerView.h; sourceTree = "<group>"; };
+		0098893B1BEBE674004BD49E /* LayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LayerView.m; sourceTree = "<group>"; };
+		0098893E1BEBF89A004BD49E /* LayerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LayerProtocol.h; sourceTree = "<group>"; };
 		00AAEFE41BE9586100BB1847 /* MapPin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPin.h; sourceTree = "<group>"; };
 		00AAEFE51BE9586100BB1847 /* MapPin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPin.m; sourceTree = "<group>"; };
 		00AAEFE71BE9599200BB1847 /* paid-bay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paid-bay.png"; sourceTree = "<group>"; };
@@ -78,6 +82,9 @@
 				0071687B1BE63CDF0073C0A5 /* Supporting Files */,
 				00AAEFE41BE9586100BB1847 /* MapPin.h */,
 				00AAEFE51BE9586100BB1847 /* MapPin.m */,
+				0098893A1BEBE674004BD49E /* LayerView.h */,
+				0098893B1BEBE674004BD49E /* LayerView.m */,
+				0098893E1BEBF89A004BD49E /* LayerProtocol.h */,
 			);
 			path = AppyParkingTest;
 			sourceTree = "<group>";
@@ -166,6 +173,7 @@
 				007168831BE63CE00073C0A5 /* ViewController.m in Sources */,
 				007168801BE63CDF0073C0A5 /* AppDelegate.m in Sources */,
 				0071687D1BE63CDF0073C0A5 /* main.m in Sources */,
+				0098893C1BEBE674004BD49E /* LayerView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
