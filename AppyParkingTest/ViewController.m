@@ -12,12 +12,15 @@
 #import "LayerView.h"
 #import "LayerProtocol.h"
 
+static const CGFloat height = 40;
+
 @interface ViewController () <CLLocationManagerDelegate, MKMapViewDelegate, LayerProtocol>
 
 @property (nonatomic) MKMapView *mapView;
 @property (nonatomic) CLLocationManager  *locationManager;
 @property BOOL OKToLocate;
 @property (nonatomic) NSMutableArray* annotations;
+@property (nonatomic) NSMutableArray* layers;
 
 @end
 
@@ -100,6 +103,7 @@
 }
 
 - (void)addLayers {
+    self.layers = [NSMutableArray new];
     [self createLayerAtPosition:4 withColour:[UIColor darkGrayColor]];
     [self createLayerAtPosition:3 withColour:[UIColor colorWithRed:1 green:0 blue:1 alpha:1]];
     [self createLayerAtPosition:2 withColour:[UIColor blueColor]];
@@ -110,6 +114,27 @@
     LayerView* layer = [[LayerView alloc] initWithPosition:position colour:colour];
     layer.delegate = self;
     [self.view addSubview:layer];
+    [self.layers addObject:layer];
+}
+
+- (void)repositionLayers {
+    for (LayerView* layer in self.layers) {
+        CGRect frame = layer.frame;
+        frame.origin.y = layer.frame.size.height - height * layer.position;
+        [layer setFrame:frame];
+    }
+}
+
+- (void)expandLayer:(LayerView*)layerView {
+    for (LayerView* layer in self.layers) {
+        CGRect frame = layer.frame;
+        if (layer == layerView) {
+            frame.origin.y = 0;
+        } else {
+            frame.origin.y = layer.frame.size.height;
+        }
+        [layer setFrame:frame];
+    }
 }
 
 #pragma mark MKAnnotationView methods
@@ -155,8 +180,14 @@
 
 #pragma mark LayerProtocol methods
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event layer:(id)layer {
-    NSLog(@"%s", __PRETTY_FUNCTION__);
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event layer:(LayerView*)layer {
+    [UIView animateWithDuration:0.5 animations:^{
+        if (layer.expanded) {
+            [self expandLayer:layer];
+        } else {
+            [self repositionLayers];
+        }
+    }];
 }
 
 @end

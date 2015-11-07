@@ -12,6 +12,7 @@
 @interface LayerView : UIView
 
 @property (nonatomic) BOOL expanded;
+@property (nonatomic) int position;
 
 @property (nonatomic) id<LayerProtocol> delegate;
 
